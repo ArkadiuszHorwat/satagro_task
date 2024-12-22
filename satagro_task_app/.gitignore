@@ -32,6 +32,9 @@ migrate_working_dir/
 /build/
 .fvm/
 
+# Generated
+*.freezed.dart
+
 # Symbolication related
 app.*.symbols
 
