@@ -32,6 +32,7 @@ class _AppMenuState extends State<AppMenu> {
         },
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _menuSelectedIndex,
+          selectedItemColor: Colors.lightGreen,
           onTap: _onMenuOptionClicked,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(

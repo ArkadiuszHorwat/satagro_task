@@ -41,7 +41,6 @@ class _RowSortCellState extends State<RowSortCell> {
       },
       child: Container(
         alignment: Alignment.center,
-        color: Colors.lime,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

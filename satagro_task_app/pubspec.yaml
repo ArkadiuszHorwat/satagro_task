@@ -15,7 +15,9 @@ dependencies:
   flutter_bloc: ^8.1.6
   get_it: ^8.0.3
   freezed_annotation: ^2.4.4
-  data_table_2: ^2.5.18
+  google_maps_flutter: ^2.10.0
+  horizontal_data_table: ^4.3.1
+  # location: ^7.0.1
 
 dev_dependencies:
   flutter_test:
