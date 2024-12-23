@@ -6,8 +6,6 @@ part 'chemical_element.freezed.dart';
 class ChemicalElement with _$ChemicalElement {
   const factory ChemicalElement({
     required String name,
-    required double value,
+    required List<double> values,
   }) = _ChemicalElement;
-
-  factory ChemicalElement.empty() => const ChemicalElement(name: '', value: -1);
 }

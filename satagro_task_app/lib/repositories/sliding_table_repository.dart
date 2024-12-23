@@ -12,7 +12,6 @@ class SlidingTableRepository implements ISlidingTableRepository {
   @override
   List<ChemicalElement> getChemicalElements() {
     final result = <ChemicalElement>[];
-    final randomValues = <double>[];
 
     final chemicalElements = [
       'Wodór',
@@ -25,18 +24,19 @@ class SlidingTableRepository implements ISlidingTableRepository {
       'Tlen',
     ];
 
-    for (var i = 0; i < 8; i++) {
-      randomValues.add(_doubleInRange(i, 8));
-    }
+    for (var element in chemicalElements) {
+      final randomValues = <double>[];
+      for (var i = 0; i < 8; i++) {
+        randomValues.add(_doubleInRange(i, 8));
+      }
 
-    for (var i = 0; i < 8; i++) {
-      result.add(
-          ChemicalElement(name: chemicalElements[i], value: randomValues[i]));
+      result.add(ChemicalElement(name: element, values: randomValues));
     }
 
     return result;
   }
 
-  double _doubleInRange(num start, num end) =>
-      Random().nextDouble() * (end - start) + start;
+  double _doubleInRange(num start, num end) => num.parse(
+          (Random().nextDouble() * (end - start) + start).toStringAsFixed(3))
+      .toDouble();
 }
